@@ -14,7 +14,7 @@ const GalleyItem = ({ tags, webformatURL, largeImageURL }) => {
     <StyledLi>
       <StyledItemImage onClick={toggleModal} src={webformatURL} alt={tags} />
       {showModal && (
-        <Modal onClose={toggleModal}>
+        <Modal onClose={toggleModal} src={largeImageURL} alt={tags}>
           <img src={largeImageURL} alt={tags} width="750" />
         </Modal>
       )}
